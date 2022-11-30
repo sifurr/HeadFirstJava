@@ -1,3 +1,9 @@
+/**
+ * This class is just for free flowing 
+ * code writing where many concepts have 
+ * been introduced
+ */
+
 public class SharpenYourPencil76
 {
 	public static void main(String[] args)
