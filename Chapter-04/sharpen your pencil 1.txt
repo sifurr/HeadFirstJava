@@ -1,0 +1,3 @@
+int a = calcArea(7, 12);
+calcArea(2, 3);
+
