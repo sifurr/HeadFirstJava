@@ -38,7 +38,7 @@ public class ArrayListMagnet
 		{
 			a.add(4, "2.2");
 		}
-		printList(a);		
+		printList(a);
 	}
 	
 }
