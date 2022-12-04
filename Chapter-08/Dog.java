@@ -1,4 +1,4 @@
-public class Dog extends Canine
+public class Dog extends Canine implements Pet
 {
 	@Override
 	public void makeNoise()
@@ -10,5 +10,17 @@ public class Dog extends Canine
 	public void eat()
 	{
 		//
+	}
+
+	@Override
+	public void beFriendly() {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void play() {
+		// TODO Auto-generated method stub
+		
 	}
 }

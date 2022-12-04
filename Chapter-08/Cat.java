@@ -1,4 +1,4 @@
-public class Cat extends Feline
+public class Cat extends Feline implements Pet
 {
 	@Override
 	public void makeNoise()
@@ -10,5 +10,17 @@ public class Cat extends Feline
 	public void eat()
 	{
 		//
+	}
+
+	@Override
+	public void beFriendly() {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void play() {
+		// TODO Auto-generated method stub
+		
 	}
 }
