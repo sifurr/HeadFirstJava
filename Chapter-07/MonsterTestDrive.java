@@ -30,6 +30,8 @@ class Vampire extends Monster
     }
 }
 
+
+
 class Dragon extends Monster 
 {
     boolean frighten(int degree) 
@@ -38,3 +40,4 @@ class Dragon extends Monster
         return true;
     }
 }
+
