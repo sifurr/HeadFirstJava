@@ -1,4 +1,6 @@
-import java.util.*;
+import java.util.List;
+import java.util.Set;
+import java.util.TreeSet;
 
 public class Jukebox10 
 {
@@ -21,7 +23,6 @@ public class Jukebox10
         Set<SongV4> songSetB = new TreeSet<>((o1, o2) -> o1.getBpm() - o2.getBpm());
         songSetB.addAll(songList);
         System.out.println(songSetB);
-
     }    
 }
 
