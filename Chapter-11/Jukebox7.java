@@ -25,6 +25,8 @@ public class Jukebox7
         songList.sort((one, two) -> one.getBpm() - two.getBpm());
         System.out.println("Order by BPM: " + songList);
 
+        songList.sort((one, two) -> one.getTitle().compareTo(two.getTitle()));
+        System.out.println("Ascending order: " + songList);
       
         songList.sort((one, two) -> two.getTitle().compareTo(one.getTitle()));
         System.out.println("Descending order: " + songList);
