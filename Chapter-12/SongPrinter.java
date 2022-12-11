@@ -1,6 +1,7 @@
 import java.util.ArrayList;
 import java.util.Comparator;
 import java.util.List;
+import java.util.Optional;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
@@ -80,18 +81,32 @@ public class SongPrinter
         System.out.println(allSongsByLambda);                          
         System.out.println();       
         
-        // another use of method reference to sort songs
+        // another use of method reference to sort songs (alternative of above allSongsByLambda)
         List<Song> allSongsByMethodRefewrence = songs
                               .stream()
                               .sorted(Comparator.comparingInt(Song::getYear))
                               .collect(Collectors.toList());
         System.out.println("Songs sorted by using method reference");
         System.out.println(allSongsByMethodRefewrence);                          
-        System.out.println(); 
-
-
-
-
-
+        System.out.println();       
+        
+        // another use of method reference to sort songs
+        boolean collectingResultAsBoolean = songs
+                              .stream()
+                              .anyMatch(song -> song.getGenre().equals("R&B")); // anyMatch() is a terminal operation
+        System.out.println("See if there is R&B genre's song");
+        System.out.println(collectingResultAsBoolean);                          
+        System.out.println();        
+        
+        // another use of method reference to sort songs
+        Optional<Song> findASpecificSong = songs
+                              .stream()
+                              .filter(song -> song.getYear() == 1995)
+                              .findFirst(); // anyMatch() is a terminal operation
+        System.out.println("Find a specific song");
+        System.out.println();
+        System.out.println(findASpecificSong);
+        System.out.println();
+        
     }
 }
