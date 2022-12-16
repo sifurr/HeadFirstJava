@@ -1,4 +1,4 @@
-= new ShortMessage();
-            msg1.setMessage(NOTE_ON, 1, 440, 100);
-            MidiEvent noteOn = new MidiEvent(msg1, 1);
+    ShortMessage msg2 = new ShortMessage();
+            msg2.setMessage(NOTE_ON, 1, note, 100);
+            MidiEvent noteOn = new MidiEvent(msg2, 1);
             track.add(noteOn);
