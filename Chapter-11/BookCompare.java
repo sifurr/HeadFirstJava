@@ -13,6 +13,7 @@ class TestTreeComparator {
         Book b1 = new Book("How Cats Work");
         Book b2 = new Book("Remix your Body");
         Book b3 = new Book("Finding Emo");
+
         BookCompare bookCompare = new BookCompare();
         Set<Book> tree = new TreeSet<>(bookCompare);
         tree.add(b1);
@@ -22,6 +23,8 @@ class TestTreeComparator {
     }
 }
 
+
+/* 
 class Book implements Comparable<Book> 
 {
     String title;
@@ -37,3 +40,5 @@ class Book implements Comparable<Book>
         return title.compareTo(other.title);
     }
 }
+
+*/

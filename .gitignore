@@ -1,1 +1,4 @@
 *.class
+
+#ignore entire practice directory#
+practice/

@@ -15,19 +15,20 @@ public class Jukebox6
         // Collections.sort(songList);
         // TitleCompare titleCompare = new TitleCompare();
         songList.sort((one, two) -> one.getTitle().compareTo(two.getTitle()));
-        System.out.println("Ascending order: " + songList);
+        System.out.println("Title: Ascending order: " + songList);
+
+        // descending order by title 
+        songList.sort((one, two) -> two.getTitle().compareTo(one.getTitle()));
+        System.out.println("Title: Descending order: " + songList);
 
         // ArtistCompare artistCompare = new ArtistCompare();
         songList.sort((one, two) -> one.getArtist().compareTo(two.getArtist()));
-        System.out.println("Ascending order: " + songList);
+        System.out.println("Artist: Ascending order: " + songList);
 
         // order by bpm
         songList.sort((one, two) -> one.getBpm() - two.getBpm());
         System.out.println("Order by BPM: " + songList);
 
-        // descending order by title 
-        songList.sort((one, two) -> two.getTitle().compareTo(one.getTitle()));
-        System.out.println("Descending order: " + songList);
     }    
 }
 
