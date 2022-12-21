@@ -24,6 +24,7 @@ public class QuizCardBuilder
     public void go()
     {
         frame = new JFrame();
+        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         JPanel mainPanel = new JPanel();
         Font bigFont = new Font("sanserif", Font.BOLD, 24);
 
@@ -111,19 +112,37 @@ public class QuizCardBuilder
 
     private void saveFile(File file)
     {
-        try 
+        // BufferedWriter is outside so that finally block can access it
+        // BufferedWriter writer = null;
+
+        // modern, try with resource code
+        try (BufferedWriter writer = new BufferedWriter(new FileWriter(file))) 
         {
-            BufferedWriter writer = new BufferedWriter(new FileWriter(file));
+            
             for(QuizCard card : cardList)
             {
                 writer.write(card.getQuestion() + "/");
                 writer.write(card.getAnswer() + "\n");
             }
-
             writer.close();
         } catch (IOException ex) 
         {
             System.out.println("Couldn't write the card list out: " + ex.getMessage());
         }
+
+        // finally block is not needed because of using try-with-resource code 
+        /* 
+        finally
+        {
+            try
+            {
+                writer.close();
+            }
+            catch(Exception e)
+            {
+                System.out.println("Couldn't close the writer" + e.getMessage());
+            }
+        }
+        */ 
     } // end saveFile()
 }
