@@ -54,6 +54,14 @@ public class BeatBoxV2
         downTempo.addActionListener(e -> changeTempo(0.97f));
         buttonBox.add(downTempo);
 
+        JButton saveMusicButton = new JButton("serialize it");
+        saveMusicButton.addActionListener(e -> writeFile());
+        buttonBox.add(saveMusicButton);
+
+        JButton restoreMusicButton = new JButton("restore");
+        restoreMusicButton.addActionListener(e -> readFile());
+        buttonBox.add(restoreMusicButton);
+
         Box nameBox = new Box(BoxLayout.Y_AXIS);
         for(String instrumentName : instrumentNames)
         {
