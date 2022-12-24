@@ -17,7 +17,7 @@ public class SimpleChatServer
     private final List<PrintWriter> clientWriters = new ArrayList<>();
     public static void main(String[] args) 
     {
-        new SimpleChatServer().go();    
+        new SimpleChatClientV2().go();    
     }
 
     public void go()
